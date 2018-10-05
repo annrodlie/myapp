@@ -14,6 +14,7 @@ import { SearchPage } from '../pages/search/search';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ChinesehomePage } from '../pages/chinesehome/chinesehome';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MapsPage,
     SettingsPage,
     SavedPage,
-    SearchPage
+    SearchPage,
+    ChinesehomePage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MapsPage,
     SettingsPage,
     SavedPage,
-    SearchPage
+    SearchPage,
+    ChinesehomePage
   ],
   providers: [
     StatusBar,

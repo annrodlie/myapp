@@ -1,39 +1,29 @@
 <ion-header>
-  <!--<ion-navbar>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <ion-navbar>
     <ion-title>Home</ion-title>
-  </ion-navbar>-->
+  </ion-navbar> -->
 </ion-header>
 
-<ion-content padding>
-  <!--<h2>CBBBBB</h2>
-  <p>
-	i love my life
-  </p>
-  <!--<p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>-->
-  <div style="overflow-x:auto;">
-  <table align="center">
-    <tr>
-      <td>CHINESE</td>
-    </tr>
-    <tr>
-      <td>INDIAN</td>
-    </tr>
-    <tr>
-      <td>MALAY</td>
-    </tr>
-    <tr>
-      <td>OTHERS</td>
-    </tr>
-  </table>
-  <table align="center">
-    <tr>
-      <td>TEST</td>
-      <td>TEEST</td>
-    </tr>
-  </table>
-  </div>
+<!--<ion-content padding>-->
+<ion-content>
+<ion-grid class="no-padding">
+  <ion-row>
+    <ion-col class="col-chi" (click)="openChinesehomePage()">CHINESE</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="col-ind">INDIAN</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="col-mal">MALAY</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="col-oth">OTHERS</ion-col>
+  </ion-row>
+  <!-- <ion-row>
+    <ion-col class="col-lang">LANGUAGE</ion-col>
+    <ion-col class="col-food">FOOD</ion-col>
+  </ion-row> -->
+</ion-grid>
 
 </ion-content>
