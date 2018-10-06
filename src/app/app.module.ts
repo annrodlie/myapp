@@ -11,15 +11,18 @@ import { MapsPage} from '../pages/maps/maps';
 import { SettingsPage } from '../pages/settings/settings';
 import { SavedPage } from '../pages/saved/saved';
 import { SearchPage } from '../pages/search/search';
+import { ChinesehomePage } from '../pages/chinesehome/chinesehome';
+import { AppintroPage } from '../pages/appintro/appintro';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { ChinesehomePage } from '../pages/chinesehome/chinesehome';
+import { IonicStorageModule  } from '@ionic/storage';
 
 
 @NgModule({
   declarations: [
     MyApp,
+    AppintroPage,
     AboutPage,
     ContactPage,
     HomePage,
@@ -32,11 +35,13 @@ import { ChinesehomePage } from '../pages/chinesehome/chinesehome';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    AppintroPage,
     AboutPage,
     ContactPage,
     HomePage,

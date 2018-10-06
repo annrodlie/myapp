@@ -7,6 +7,7 @@ import { MapsPage } from '../maps/maps';
 import { SettingsPage } from '../settings/settings';
 import { SavedPage } from '../saved/saved';
 import { SearchPage } from '../search/search';
+import { AppintroPage } from '../appintro/appintro';
 
 @Component({
   templateUrl: 'tabs.html'
