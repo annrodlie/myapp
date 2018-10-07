@@ -22,4 +22,26 @@ export class ChinesehomePage {
     console.log('ionViewDidLoad ChinesehomePage');
   }
 
+    //to hide tabs bar at the bottom of application DURING intro slides
+  //https://stackoverflow.com/questions/44568816/hide-ionic-tabbar-on-specific-subpages-ionic-3
+  ngAfterViewInit() {
+    let tabs = document.querySelectorAll('.show-tabbar');
+    if (tabs !== null) {
+        Object.keys(tabs).map((key) => {
+            tabs[key].style.display = 'none';
+        });
+    }
+  }
+  //to show tabs bar again at the bottom of application AFTER intro slides
+  //https://stackoverflow.com/questions/44568816/hide-ionic-tabbar-on-specific-subpages-ionic-3
+  ionViewWillLeave() {
+    let tabs = document.querySelectorAll('.show-tabbar');
+    if (tabs !== null) {
+        Object.keys(tabs).map((key) => {
+            tabs[key].style.display = 'flex';
+        });
+
+    }
+  }
+
 }

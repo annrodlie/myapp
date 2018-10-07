@@ -30,6 +30,7 @@ export class AppintroPage {
   }
 
   //to hide tabs bar at the bottom of application DURING intro slides
+  //https://stackoverflow.com/questions/44568816/hide-ionic-tabbar-on-specific-subpages-ionic-3
   ngAfterViewInit() {
     let tabs = document.querySelectorAll('.show-tabbar');
     if (tabs !== null) {
@@ -39,6 +40,7 @@ export class AppintroPage {
     }
   }
   //to show tabs bar again at the bottom of application AFTER intro slides
+  //https://stackoverflow.com/questions/44568816/hide-ionic-tabbar-on-specific-subpages-ionic-3
   ionViewWillLeave() {
     let tabs = document.querySelectorAll('.show-tabbar');
     if (tabs !== null) {
@@ -47,6 +49,6 @@ export class AppintroPage {
         });
 
     }
-}
+  }
 
 }
