@@ -23,7 +23,7 @@ export class AppintroPage {
     console.log('ionViewDidLoad AppintroPage');
   }
 
-  // to navigate to Home page
+  // to navigate to Home page after intro page
   navHome() {
     //this.navCtrl.setRoot(HomePage);
     this.navCtrl.push(HomePage);

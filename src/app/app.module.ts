@@ -13,6 +13,7 @@ import { SavedPage } from '../pages/saved/saved';
 import { SearchPage } from '../pages/search/search';
 import { ChinesehomePage } from '../pages/chinesehome/chinesehome';
 import { AppintroPage } from '../pages/appintro/appintro';
+import { ChinhistoryPage } from '../pages/chinhistory/chinhistory';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +32,8 @@ import { IonicStorageModule  } from '@ionic/storage';
     SettingsPage,
     SavedPage,
     SearchPage,
-    ChinesehomePage
+    ChinesehomePage,
+    ChinhistoryPage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { IonicStorageModule  } from '@ionic/storage';
     SettingsPage,
     SavedPage,
     SearchPage,
-    ChinesehomePage
+    ChinesehomePage,
+    ChinhistoryPage
   ],
   providers: [
     StatusBar,

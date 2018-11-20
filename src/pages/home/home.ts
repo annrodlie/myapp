@@ -18,6 +18,7 @@ export class HomePage {
     this.navCtrl.push(ChinesehomePage);
   }
 
+  //to view app intro page first before homepage if not visited yet
   ionViewDidLoad() {
     this.storage.get('appintro-done').then(done => {
       if (!done) {
