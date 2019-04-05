@@ -7,12 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>chinhistory</ion-title>
+    <ion-title>Chinese History</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-list-header>
+      History
+    </ion-list-header>
+    <ion-item *ngFor="let chinhistory of (chinhistoryRef$ | async)" >
+    <!-- <ion-item *ngFor="let item of (shoppingListRef$ | async)" (click)="updateData($event, item)">
+    <ion-item *ngFor="let item of (shoppingListRef$ | async)" (click)="openUpdateDataPage()"> -->
+      {{chinhistory.descr}}
+    </ion-item>
+  </ion-list>
 </ion-content>

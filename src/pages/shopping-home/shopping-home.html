@@ -1,0 +1,53 @@
+<!--
+  Generated template for the ShoppingHomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Shopping Home</ion-title>
+    <ion-buttons end>
+      <button (click)="openAddPage()" ion-button>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>
+      Items
+    </ion-list-header>
+    <ion-item *ngFor="let item of (shoppingListRef$ | async)" detail-push navPush="UpdateDataPage" [navParams]="{item: item}">
+    <!-- <ion-item *ngFor="let item of (shoppingListRef$ | async)" (click)="updateData($event, item)">
+    <ion-item *ngFor="let item of (shoppingListRef$ | async)" (click)="openUpdateDataPage()"> -->
+      {{item.name}}
+    </ion-item>
+
+    <!-- <ion-item-sliding *ngFor="let item of sList; let i = index">
+        <input type="hidden" [(ngModel)]="item.key" />
+        <ion-item>
+          <ion-icon name="book" danger item-left></ion-icon>
+          <h2>{{item.name}}</h2>
+          <h3>Quantity: {{item.quantity}}</h3>
+          <p>Price: {{item.price}}</p>
+        </ion-item>
+        <ion-item-options>
+          <button ion-button color="primary" icon-left (click)="editData(item)">
+            <ion-icon name="ios-create"></ion-icon>
+            Edit
+          </button>
+          <button ion-button color="danger" icon-left (click)="deleteData(i)">
+            <ion-icon name="ios-trash"></ion-icon>
+            Delete
+          </button>
+        </ion-item-options>
+    </ion-item-sliding> -->
+
+  </ion-list>
+</ion-content>

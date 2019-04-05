@@ -7,13 +7,38 @@
 <ion-header>
 
   <ion-navbar>
-    <!-- <ion-title>search</ion-title> -->
-    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-title>search</ion-title> 
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
+  <ion-searchbar (ionInput)="search($event)"></ion-searchbar>
+  
+  <ion-list>
+    <ion-item *ngFor="let chinlandmark of chinlandmarkArr" detail-push navPush="LandmarkDetailsPage" [navParams]="{chinlandmark: chinlandmark}">
+      <h2> {{ chinlandmark?.landmarkName }} </h2>
+    </ion-item>
+
+    <!-- <ion-item *ngIf="chinlandmarks.length <= 0 || !chinlandmarks">
+        No results found.
+    </ion-item> -->
+  </ion-list>
+
+  <!-- <div *ngIf="chinlandmark?.landmarkName.length < 1">
+    <hr>
+    <p>
+      No results found :(
+    </p>
+  </div> -->
+
+  <!-- <ng-container *ngIf="chinlandmarksRef$ | async; let chinlandmark; else nocontent">
+    <div *ngFor="let cl of chinlandmark">
+      {{ cl?.landmarkName }}
+    </div> -->
+    <!-- <p>Search Results {{cl.length}}</p> -->
+  <!-- </ng-container>
+  <ng-template #nocontent>No Search Result...</ng-template> -->
 
 </ion-content>

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>chinesehome</ion-title>
+    <ion-title>Chinese</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,11 +15,12 @@
 <!--<ion-content padding>-->
   <ion-content>
     <ion-grid class="no-padding">
-      <ion-row class="row-chihistory">
-        <ion-col class="col-mal">HISTORY</ion-col>
+      <ion-row class="row-chinhistory">
+        <ion-col class="col-chinhistory" (click)="openChineseHistory()">HISTORY</ion-col>
+        <!-- <ion-col class="col-chinhistory" (click)="openShoppingHome()">SHOPPING</ion-col> -->
       </ion-row>
-      <ion-row class="row-chilandmarks">
-        <ion-col class="col-oth">LANDMARKS</ion-col>
+      <ion-row class="row-chinlandmarks">
+        <ion-col class="col-chinlandmarks" (click)="openChineseLandmarks()">LANDMARKS</ion-col>
       </ion-row>
     </ion-grid>
 

@@ -1,0 +1,70 @@
+<!--
+  Generated template for the ChinlandmarksPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Chinese Landmarks</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!-- <ion-segment [(ngModel)]="landmarkTag" color="primary" (ionChange)="changeOption(value)"> -->
+
+  <div padding>
+    <ion-segment [(ngModel)]="landmarkTag" (ionChange)="changeOption($event)">
+      <ion-segment-button value="all">
+        All
+      </ion-segment-button>
+      <ion-segment-button value="placesofworship">
+        Temples
+      </ion-segment-button>
+      <ion-segment-button value="museum">
+        Museum
+      </ion-segment-button>
+      <ion-segment-button value="park">
+        park
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+    
+  <div [ngSwitch]="landmarkTag">
+    <ion-list *ngSwitchCase="'all'">
+      <ion-item *ngFor="let chinlandmark of (chinlandmarksRef$ | async)" detail-push navPush="LandmarkDetailsPage" [navParams]="{chinlandmark: chinlandmark}">
+          {{chinlandmark.landmarkName}}
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'placesofworship'">
+      <ion-item *ngFor="let chinTemple of (chinTempleRef$ | async)" detail-push navPush="LandmarkDetailsPage" [navParams]="{chinlandmark: chinTemple}">
+          {{chinTemple.landmarkName}}
+      </ion-item>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'museum'">
+      <ion-item *ngFor="let chinMuseum of (chinMuseumRef$ | async)" detail-push navPush="LandmarkDetailsPage" [navParams]="{chinlandmark: chinMuseum}">
+          {{chinMuseum.landmarkName}}
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'park'">
+      <ion-item *ngFor="let chinPark of (chinParkRef$ | async)" detail-push navPush="LandmarkDetailsPage" [navParams]="{chinlandmark: chinPark}">
+          {{chinPark.landmarkName}}
+      </ion-item>
+    </ion-list>
+  </div>
+  
+  <!-- navParams to get data of selected item from *ngFor -->
+  <!-- This ion-list plainly display DB content -->
+  <!-- <ion-list>
+    <ion-item *ngFor="let chinlandmark of (chinlandmarksRef$ | async)" detail-push navPush="LandmarkDetailsPage" [navParams]="{chinlandmark: chinlandmark}">
+      {{chinlandmark.landmarkName}}
+    </ion-item>
+  </ion-list> -->
+</ion-content>
